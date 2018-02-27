@@ -1,0 +1,41 @@
+version: '2'
+services:
+  diaspora:
+    image: "koehn/diaspora:${version_diaspora}"
+    links:
+      - postgres
+      - redis
+    volumes:
+      - "${data_path}/data/images:/home/diaspora/diaspora/public/uploads/images"
+      - "${data_path}/app/diaspora.yml:/home/diaspora/diaspora/config/diaspora.yml:ro"
+      - "${data_path}/app/database.yml:/home/diaspora/diaspora/config/database.yml:ro"
+    ports:
+      - '${port}:3000'
+    restart: always
+    working_dir: /home/diaspora/
+
+  postgres:
+    read_only: true
+    mem_limit: 8G
+    image: postgres:10.2-alpine
+    tmpfs:
+    - /tmp
+    environment:
+      - POSTGRES_USER=diaspora
+      - "POSTGRES_PASSWORD=${POSTGRES_PASSWORD}"
+      - POSTGRES_DB=diaspora_production
+    volumes:
+      - "${data_path}/data/postgres:/var/lib/postgresql/data"
+      - "${data_path}/data/postgres-run:/var/run/postgresql"
+    restart: always
+
+  redis:
+    image: redis:3.2
+    mem_limit: 384M
+    read_only: true
+    tmpfs:
+    - /tmp
+    command: redis-server --appendonly yes
+    volumes:
+      - "${data_path}/data/redis:/data"
+    restart: always

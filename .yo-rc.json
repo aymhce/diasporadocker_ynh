@@ -1,0 +1,18 @@
+{
+  "generator-dockerapp-yunohost": {
+    "beautifulName": "Diaspora",
+    "defaultPathOption": "",
+    "forceSecureAccess": false,
+    "secureAccessOption": false,
+    "adminUserOption": false,
+    "enDescription": "A open and powerfull social network",
+    "frDescription": "Un réseau social libre et puissant",
+    "urlApp": "https://diasporafoundation.org/",
+    "urlDockerHub": "https://hub.docker.com/r/koehn/diaspora/",
+    "authorName": "aymhce",
+    "authorEmail": "aymhce@gmail.com",
+    "idName": "diasporadocker",
+    "reverseProxyProtocol": "http",
+    "scriptsLoadSave": true
+  }
+}
