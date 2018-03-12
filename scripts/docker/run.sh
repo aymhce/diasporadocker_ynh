@@ -11,7 +11,7 @@ export POSTGRES_PASSWORD=$db_pwd
 docker-compose -p $app -f $data_path/docker-compose.yml up -d 1>&2
 CR=$?
 
-echo "waiting 180s for startup" 1>&2
-sleep 180
+echo "sorry, waiting 300s for startup" 1>&2
+sleep 300
 
 echo $CR

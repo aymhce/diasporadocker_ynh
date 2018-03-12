@@ -13,6 +13,6 @@
     "authorEmail": "aymhce@gmail.com",
     "idName": "diasporadocker",
     "reverseProxyProtocol": "http",
-    "scriptsLoadSave": true
+    "scriptsLoadSave": false
   }
 }

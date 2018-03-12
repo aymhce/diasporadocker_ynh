@@ -103,16 +103,6 @@ dockerapp_ynh_rm () {
 	bash docker/rm.sh
 }
 
-# docker load
-dockerapp_ynh_load () {
-        bash docker/load.sh
-}
-
-# docker save
-dockerapp_ynh_save () {
-        bash docker/save.sh
-}
-
 
 # Modify Nginx configuration file and copy it to Nginx conf directory
 dockerapp_ynh_preparenginx () {

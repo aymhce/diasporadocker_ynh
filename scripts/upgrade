@@ -32,10 +32,11 @@ dockerapp_ynh_loadvariables
 dockerapp_ynh_findreplaceallvaribles
 
 #=================================================
-# BACKUP DATA IN CONTAINER
+# COPY CONF
 #=================================================
 
-dockerapp_ynh_save
+# Copy files to the right place
+dockerapp_ynh_copyconf
 
 #=================================================
 # STOP AND REMOVE SERVICE
@@ -50,12 +51,6 @@ dockerapp_ynh_rm
 
 # docker run
 dockerapp_ynh_run
-
-#=================================================
-# RESTORE DATA IN CONTAINER
-#=================================================
-
-dockerapp_ynh_load
 
 
 #=================================================

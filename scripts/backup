@@ -28,12 +28,6 @@ domain=$(ynh_app_setting_get "$app" domain)
 dockerapp_ynh_loadvariables
 
 #=================================================
-# BACKUP DATA IN CONTAINER
-#=================================================
-
-dockerapp_ynh_save
-
-#=================================================
 # BACKUP THE APP MAIN DIR
 #=================================================
 
