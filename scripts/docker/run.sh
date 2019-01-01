@@ -2,7 +2,7 @@
 
 source /usr/share/yunohost/helpers
 
-[ "$architecture" == "amd64" ] && export version_diaspora=0.7.7.1
+[ "$architecture" == "amd64" ] && export version_diaspora=0.7.8.0
 [ -z $version_diaspora ] && ynh_die "Sorry, your $architecture architecture is not supported ..."
 
 db_pwd=$(ynh_app_setting_get $app dbpwd)
